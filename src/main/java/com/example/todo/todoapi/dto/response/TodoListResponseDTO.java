@@ -4,10 +4,8 @@ import lombok.*;
 
 import java.util.List;
 
-@Getter
-@Setter
-@ToString
-@EqualsAndHashCode
+@Setter @Getter
+@ToString @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -17,3 +15,12 @@ public class TodoListResponseDTO {
     private List<TodoDetailResponseDTO> todos;
 
 }
+
+
+
+
+
+
+
+
+

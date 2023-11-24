@@ -3,7 +3,7 @@ package com.example.todo.todoapi.dto.response;
 import com.example.todo.todoapi.entity.Todo;
 import lombok.*;
 
-@Getter @Setter
+@Setter @Getter
 @ToString @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,3 +21,14 @@ public class TodoDetailResponseDTO {
         this.done = todo.isDone();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
