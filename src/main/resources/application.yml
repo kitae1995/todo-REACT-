@@ -1,3 +1,4 @@
+
 server:
   port: 8181
 
@@ -8,12 +9,10 @@ spring:
     password: spring
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    # show-sql: true  ?? ??? ??? ???? ??
-    # ?? ?? -> ? DB? ?? ??? ??
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
-      ddl-auto: update # ?? DDL ?? ?? -> create? ???? ??? ???? ??? ?? ??.
-    database: mysql # DB ?? ??
+      ddl-auto: update
+    database: mysql
 
 logging.level:
   org.hibernate.SQL: debug
@@ -22,3 +21,6 @@ logging.level:
 springdoc:
   swagger-ui:
     path: /myapi.html
+
+jwt:
+  secret: wk6bJ+lYgaZRr7HRL7WPVoWUITheuUUExN/7QDTvNKrcbbF/jZfowaKrEDGLXKs39RQk0Zn6/L06U/PJ5FwiXA==
