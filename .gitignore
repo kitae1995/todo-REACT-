@@ -1,3 +1,5 @@
+
+*.yml
 README.md
 .gradle
 build/

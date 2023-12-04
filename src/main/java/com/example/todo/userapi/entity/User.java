@@ -1,13 +1,14 @@
 package com.example.todo.userapi.entity;
 
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Setter @Getter
+@Getter
 @ToString @EqualsAndHashCode(of = "id")
 @NoArgsConstructor
 @AllArgsConstructor
@@ -34,6 +35,20 @@ public class User {
 
     @CreationTimestamp
     private LocalDateTime joinDate;
+
+    @Enumerated(EnumType.STRING)
+//    @ColumnDefault("'COMMON'")
+    @Builder.Default
+    private Role role = Role.COMMON; // 유저 권한
+
+    private String profileImg; // 프로필 이미지 경로
+
+
+
+    // 등급 수정 메서드
+    public void changeRole(Role role) {
+        this.role = role;
+    }
 
 }
 
